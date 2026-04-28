@@ -20,18 +20,28 @@ export function AboutSection() {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image */}
+
+          {/* VIDEO */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="w-full aspect-video rounded-2xl overflow-hidden shadow-xl"
           >
-            <img src="/video.svg" alt="Happy couple planning together" className="w-full drop-shadow-xl rounded-2xl" />
+            <iframe
+              src="https://player.vimeo.com/video/1097736762"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Vimeo Video"
+            ></iframe>
           </motion.div>
 
-          {/* Content */}
+          {/* CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,9 +52,11 @@ export function AboutSection() {
               <span className="font-medium">Your Relationship Has A DNA.</span> <br className="hidden md:block" />
               We Just Mapped It.
             </h2>
+
             <p className="text-[15px] md:text-base text-gray-700 mb-8 leading-relaxed">
               Counselling often focuses on what's wrong. We focus on what's right with you. We move past 'who is right' and discover 'how we work best together. Our methodology doesn't just identify your triggers. It provides a concrete, 12-page manual for your unique partnership, helping you build a bond that is resilient, predictable, and deeply fulfilling.
             </p>
+
             <div className="space-y-4 mb-10">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -68,11 +80,13 @@ export function AboutSection() {
               <button className="bg-[#0f4c3a] text-white px-8 py-3.5 rounded-xl hover:bg-[#0a3629] transition-colors font-semibold shadow-sm">
                 Get Started
               </button>
+
               <button className="border-2 border-[#0f4c3a] text-[#0f4c3a] bg-white px-8 py-3.5 rounded-xl hover:bg-gray-50 transition-colors font-bold shadow-sm">
                 How It Works
               </button>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
