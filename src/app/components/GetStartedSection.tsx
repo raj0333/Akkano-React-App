@@ -94,7 +94,7 @@ export function GetStartedSection() {
             <img
               src="/couple.png"
               alt="Couple"
-              className="relative mt-[60px] z-10 max-w-[585px] object-contain drop-shadow-2xl scale-110"
+              className="relative mt-[60px] z-10 max-w-[720px] object-contain drop-shadow-2xl scale-110"
             />
           </motion.div>
 
